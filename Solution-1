@@ -1,1 +1,22 @@
-
+#include <bits/stdc++.h>
+using namespace std;
+void solve() {
+	double n,a,b,first=0,sec=0;
+	cin>>n>>a>>b;
+	for(int face=1;face<=n;face++){
+		int entry;cin>>entry;
+		if(entry==a){first++;}
+		if (entry==b){sec++;}
+	}
+	int ffirst=(first/n);
+	int ssec=(sec/n);
+	double prob=(sec/n)*(first/n);
+	cout<<prob<<endl;
+}
+int main() {
+	int t;cin>>t;
+	while(t--){
+	solve();
+	}
+	return 0;
+}

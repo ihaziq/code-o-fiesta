@@ -20,3 +20,5 @@ the first shot of the opposing team, the third character to the second shot of H
 
 If a match ended in a tie, print "TIE". If Haziq's team won, print "TEAM-A", otherwise print "TEAM-B". Also, if the match didn't end in a tie, print 
 the minimum number of kicks required to decide the result, so that they can also know how much times they shot in vain.
+
+

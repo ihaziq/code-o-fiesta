@@ -1,1 +1,16 @@
+EASY
+-------------------
+Ziya decided to visit casino near his house to gamble.
+The game Ziya is going to play in the casino consists of tossing a die with N faces twice. There is a number written on each face of the die (numbers are not necessarily distinct). In order to win, 
+Ziya must get the number A on the first toss and the number B on the second toss of the die.
+Calculate the probability that Ziya will win the game. Assuming that Ziya gets each face of the die with the same probability on each toss and that tosses are mutually independent.
+---------------
+Input
+1. No. of test cases
+2. Three space-separated integers N, A, and B.
+3. N spaced integers x1, x2.....xN.
+Output
+1. Probability Ziya will win
+Constraints
 
+Sample

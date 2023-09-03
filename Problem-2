@@ -1,15 +1,2 @@
-Medium ?? Tags - Strings
----------------------------------
-Title - Haziq Plays Football
-Haziq likes to play football with his friends. They played a number of matches and surprisingly, every match was a tie, so they decided to declare the winner 
-with penalty shoot-out. As they didn't know the penalty shoot-out rules, they just decided to take 20 shots alternatively (each team takes 10 shots).
-The standard rules are:
 
-The teams will take shots alternatively.
-1. At first, each team will take five penalty shots.
-2. If one team does not have more goals than the other after these five shots, the shoot-out will proceed to sudden death.
-3. In between of first 10 kicks, If one team has an advantage over other which can't be compensated, 
-then the team with the advantage will be declared winner at that instant i.e. before the completion of 10 kicks.
-4. In sudden death, each team will take at most five more shots. Everytime after both teams take a shot, 
-the following rule is used: if one team has scored more goals than the other, that team is the winner.
-5. If each team has taken 10 shots and the winner still cannot be decided, the result will be a tie.
+

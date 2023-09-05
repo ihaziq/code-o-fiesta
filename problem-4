@@ -1,1 +1,97 @@
+Title: Vishy's Knight
+Description:
+Vishwanathan Anand is known for his prowess of using knights in dead lost chess positions. Here, he needs to quickly capture the  Magnus Carlsen's last pawn to force a draw. Given a square chessboard of variable dimension (not just 8), the initial position of a vishy's knight and position of carlsen's pawn. Find out the minimum steps vishy's knight will take to capture carlsen's pawn. If he cannot capture the pawn, return -1.
+The initial and the target position co-ordinates of Knight have been given accoring to 1-base indexing.
+
+Input:
+N=6
+knightPos[ ] = {4, 5}
+pawnPos[ ] = {1, 1}
+Output:
+3
+Explanation:
+(4, 5) -> (5, 3) -> (3, 2) -> (1, 1). 
+
+Input:
+N=8
+knightPos[ ] = {7, 7}
+pawnPos[ ] = {1, 5}
+Output:
+4
+Explanation:
+(4, 5) -> (6, 5) -> (5, 3) -> (7, 2) -> (1, 5).
+
+
+Test Cases
+
+//EDGE 
+
+INPUT:-
+line1- 1 
+line2- 1 1
+line3- 1 1
+OUTPUT:-
+line1- 0
+
+
+INPUT:-
+line1- 1000
+line2- 1000 1000
+line3- 1 1
+OUTPUT:-
+line1- 666
+
+//NORMAL
+
+INPUT:
+line1- 8 
+line2- 7 7
+line3- 1 5
+OUTPUT:-
+line1- 4
+
+INPUT:
+line1- 6
+line2- 4 5
+line3- 1 1
+OUTPUT:-
+line1- 3
+
+INPUT:-
+line1- 17
+line2- 12 7
+line3- 4 9
+OUTPUT:-
+line1- 4
+
+INPUT:-
+line1- 73
+line2- 43 33
+line3- 29 69
+OUTPUT:-
+line1- 18
+
+INPUT:-
+line1- 451
+line2- 321 1
+line3- 430 4
+OUTPUT:-
+line1- 56
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

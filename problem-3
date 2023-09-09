@@ -1,1 +1,26 @@
+You are given a grid of size M X N, where each cell in the grid is either '1' (representing a star) or '0' (representing empty space). 
+Stars can form pattern in two ways: Single Star: A single cell with the value '1' represents a single star. (Not adjacent to any other 
+star horizontally or vertically). Star Cluster: If a group of adjacent cells ( horizontally or vertically) with the value '1' forms a 
+connected cluster, it represents a star cluster. Write a function 'countStars(grid)' that takes the 'grid' as input and returns the total 
+count of stars, including both single stars and star clusters. The main() function is:
 
+int main() {
+    int M, N;
+    cin >> M;
+    cin >> N;
+    int grid[M][N];
+    for(int i=0;i<M;i++){
+        for(int j=0;j<N;j++){
+            cin >> grid[i][j];
+        }
+    }
+    return 0;
+}
+Input Format
+
+Rows in Grid (M)
+Columns in Grid (N)
+2D matrix of size 'M X N' containing only '0' and '1'.
+Constraints
+
+1<=M, N<=1000

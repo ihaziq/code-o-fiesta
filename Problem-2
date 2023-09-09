@@ -1,2 +1,18 @@
+Write a function that transforms a string by replacing consecutive repeated characters with a single character followed by the count of repetitions.
+If the compressed string is not shorter than the original, return the original string.
 
+The main() function is:
+
+int main() {
+    string str;
+    cin >> str;
+    return 0;
+}
+Input Format
+
+String with repeated / non-repeated characters.
+
+Constraints
+
+Size of string <=100
 

@@ -1,54 +1,60 @@
-#include <bits/stdc++.h>
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
 using namespace std;
-#define fori(i,a,b) for (int i=a;i<b;i++)
+
+    int dir[8][2] = {
+        {2,1},{2,-1},{-2,1},{-2,-1},
+        {1,2},{-1,2},{1,-2},{-1,-2}
+    };
+    double solve(int i,int j,int N,int steps){
+        if(i < 0 or j < 0 or i >= N or j >= N)
+            return 0;
+        if(steps == 0)
+            return 1.0;
+        double ans = 0;
+        for(int p=0;p<8;p++){
+            int x = i + dir[p][0];
+            int y = j + dir[p][1];
+            ans += solve(x,y,N,steps-1)/8.0;
+        }
+        return ans;
+    }
+    float findProb(int N,int start_x, int start_y, int k)
+    {
+        vector<vector<double>> dp(N+1,vector<double>(N+1,0.0));
+        vector<vector<double>> curr(N+1,vector<double>(N+1,0.0));
+        for(int i=0;i<N;i++)
+            for(int j=0;j<N;j++)
+                dp[i][j] = 1.0;
+        for(int steps=1;steps<=k;steps++){
+            for(int i=0;i<N;i++){
+                for(int j=0;j<N;j++){
+                    double ans = 0;
+                    for(int p=0;p<8;p++){
+                        int x = i + dir[p][0];
+                        int y = j + dir[p][1];
+                        if(x < 0 or y < 0 or x >= N or y >= N)
+                            continue;
+                        ans += dp[x][y]/8.0;
+                    }
+                    curr[i][j] = ans;
+                }
+            }
+            dp = curr;
+        }
+        return dp[start_x][start_y];
+    }
+
 int main() {
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-	string str;
-	while (cin>>str){
-	    int x=0,y=0,flag=0;
-	    int res;
-	    
-	    fori(a,1,11){
-	        if (str[2*a-2]=='1') x++;
-	        if (a<6){
-	            int m=5-a;
-	            int o=abs(x-y);
-	            if (o>m+1 && x>y) {
-	                flag=1;
-	                res=2*a-1;
-	            }
-	            else if (o>m && y>x){
-	                flag=2;
-	                res=2*a-1;
-	            }
-	        }
-	        if (flag!=0) break;
-	        if (str[2*a-1]=='1') y++;
-	        if (a>5){
-	            if (x>y) {
-	                flag=1;
-	                res=2*a;
-	            }
-	            else if (y>x){ flag=2; res=2*a;}
-	        }
-	        else {
-	            int m=5-a;
-	            int o=abs(x-y);
-	            if (o>m){
-	                if (y>x) flag=2;
-	                else flag=1;
-	                res=2*a;
-	            }
-	            
-	        }
-	        if (flag!=0) break;
-	        
-	    }
-	    if (flag==1) cout<<"TEAM-A "<<res;
-	    else if (flag==2) cout<<"TEAM-B "<<res;
-	    else cout<<"TIE ";
-	    cout<<"\n";
-	}
-	return 0;
+    int N, X, Y, K;
+    cin >> N;
+    cin >> X;
+    cin >> Y;
+    cin >> K;
+    float prob = findProb(N, X, Y, K);
+    cout << prob;
+    return 0;
 }
